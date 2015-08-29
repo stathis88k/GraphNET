@@ -1,7 +1,7 @@
-﻿<Application x:Class="Graph.App"
+﻿<Application x:Class="GraphApp.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Graph"
+             xmlns:local="clr-namespace:GraphApp"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          
