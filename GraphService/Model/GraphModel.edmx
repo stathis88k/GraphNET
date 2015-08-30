@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="GraphDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="GraphModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Edges">
           <Key>
             <PropertyRef Name="FromNode" />
@@ -21,7 +21,7 @@
           <Property Name="Id" Type="int" Nullable="false" />
           <Property Name="label" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="GraphDBModelStoreContainer">
+        <EntityContainer Name="GraphModelStoreContainer">
           <EntitySet Name="Edges" EntityType="Self.Edges" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Nodes" EntityType="Self.Nodes" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
@@ -29,7 +29,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="GraphDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="GraphModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Edges">
           <Key>
             <PropertyRef Name="FromNode" />
@@ -55,9 +55,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="GraphDBModelStoreContainer" CdmEntityContainer="GraphDB">
+        <EntityContainerMapping StorageEntityContainer="GraphModelStoreContainer" CdmEntityContainer="GraphDB">
           <EntitySetMapping Name="Edges">
-            <EntityTypeMapping TypeName="GraphDBModel.Edges">
+            <EntityTypeMapping TypeName="GraphModel.Edges">
               <MappingFragment StoreEntitySet="Edges">
                 <ScalarProperty Name="FromNode" ColumnName="FromNode" />
                 <ScalarProperty Name="ToNode" ColumnName="ToNode" />
@@ -66,7 +66,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Nodes">
-            <EntityTypeMapping TypeName="GraphDBModel.Nodes">
+            <EntityTypeMapping TypeName="GraphModel.Nodes">
               <MappingFragment StoreEntitySet="Nodes">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="label" ColumnName="label" />

@@ -6,13 +6,26 @@
         xmlns:graphx="http://schemas.panthernet.ru/graphx/"
         xmlns:local="clr-namespace:GraphApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="700">
-    <Grid>
-        <Button x:Name="button" Content="Calculate the path" HorizontalAlignment="Left" Margin="467,415,0,0" VerticalAlignment="Top" Width="200"/>
-
-        <graphx:ZoomControl x:Name="zoomctrl" Margin="10,10,10,83">
+        Title="Shortest path calculator" ResizeMode="NoResize" Height="832" Width="1207">
+    
+    <Grid Margin="10,20,10,10">
+        
+        <graphx:ZoomControl x:Name="zoomctrl" Margin="10,75,10,83">
             <local:GraphAreaExample x:Name="GraphArea"/>
         </graphx:ZoomControl>
+        <Button x:Name="button" Content="Calculate the path" HorizontalAlignment="Right" Margin="926,721,0,0" VerticalAlignment="Top" Width="200" Click="button_Click"/>
+        <StackPanel HorizontalAlignment="Left" Height="50" Margin="10,7,0,0" VerticalAlignment="Top" Width="1159">
+            <StackPanel Orientation="Horizontal" Margin="10,7,0,0">
+                <TextBlock Text="From Node" Margin="20,0,0,0"/>
+                <ComboBox x:Name="cbFromNode" Margin="20,0,0,0" Width="200"/>
+                <TextBlock Text="To Node:" Margin="20,0,0,0"/>
+                <ComboBox x:Name="cbToNode" Margin="20,0,0,0" Width="200"/>
+                <TextBlock Text="Shortest path:" Margin="20,0,0,0"/>
+                <TextBox x:Name="txtPath" Margin="20,0,0,0" Width="350"/>
+            </StackPanel>
+
+        </StackPanel>
+
 
     </Grid>
 </Window>

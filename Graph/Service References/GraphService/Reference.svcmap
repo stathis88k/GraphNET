@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a86c0631-bb08-4ccc-8c4f-0d5058d75233" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="dcbf6df0-50a4-41f4-963f-e1103d1f3ca8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -9,7 +9,9 @@
     <GenerateInternalTypes>false</GenerateInternalTypes>
     <GenerateMessageContracts>false</GenerateMessageContracts>
     <NamespaceMappings />
-    <CollectionMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
     <GenerateSerializableTypes>true</GenerateSerializableTypes>
     <Serializer>Auto</Serializer>
     <UseSerializerForFaults>true</UseSerializerForFaults>
@@ -22,10 +24,11 @@
     <MetadataSource Address="http://localhost:60332/GraphService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="GraphService.xsd" MetadataType="Schema" ID="97d488c5-7b2c-48b1-b8fe-06e76e073d04" SourceId="1" SourceUrl="http://localhost:60332/GraphService.svc?xsd=xsd0" />
-    <MetadataFile FileName="GraphService1.xsd" MetadataType="Schema" ID="18c60a94-20a0-4d2d-8ebe-a9afa77c269d" SourceId="1" SourceUrl="http://localhost:60332/GraphService.svc?xsd=xsd1" />
-    <MetadataFile FileName="GraphService.disco" MetadataType="Disco" ID="7db1d3d2-883c-45e6-a0c6-ea142e82ea57" SourceId="1" SourceUrl="http://localhost:60332/GraphService.svc?disco" />
-    <MetadataFile FileName="GraphService.wsdl" MetadataType="Wsdl" ID="63c1b1f8-70c2-4bb4-8dbe-a0a29de366ef" SourceId="1" SourceUrl="http://localhost:60332/GraphService.svc?wsdl" />
+    <MetadataFile FileName="GraphService2.xsd" MetadataType="Schema" ID="0dad20b1-a5b3-4e5d-8061-a5ab4c9d1beb" SourceId="1" SourceUrl="http://localhost:60332/GraphService.svc?xsd=xsd0" />
+    <MetadataFile FileName="GraphService4.xsd" MetadataType="Schema" ID="a58d89d9-102b-453f-9897-cd4e52015e12" SourceId="1" SourceUrl="http://localhost:60332/GraphService.svc?xsd=xsd2" />
+    <MetadataFile FileName="GraphService.disco" MetadataType="Disco" ID="cac4159a-10f9-4a34-8eb8-86199238a520" SourceId="1" SourceUrl="http://localhost:60332/GraphService.svc?disco" />
+    <MetadataFile FileName="GraphService.wsdl" MetadataType="Wsdl" ID="e057743f-76d5-4545-a7fb-7cb449063429" SourceId="1" SourceUrl="http://localhost:60332/GraphService.svc?wsdl" />
+    <MetadataFile FileName="GraphService1.xsd" MetadataType="Schema" ID="ca4e97fe-e549-4ad8-8b34-2a74287cae79" SourceId="1" SourceUrl="http://localhost:60332/GraphService.svc?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

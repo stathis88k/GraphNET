@@ -22,10 +22,10 @@ namespace GraphApp.GraphService {
         System.Threading.Tasks.Task UpdateDBAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGraphService/ShortestPath", ReplyAction="http://tempuri.org/IGraphService/ShortestPathResponse")]
-        void ShortestPath(string a, string b);
+        System.Collections.Generic.List<int> ShortestPath(int start, int finish, System.Collections.Generic.Dictionary<int, System.Collections.Generic.Dictionary<int, int>> vlist);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IGraphService/ShortestPath", ReplyAction="http://tempuri.org/IGraphService/ShortestPathResponse")]
-        System.Threading.Tasks.Task ShortestPathAsync(string a, string b);
+        System.Threading.Tasks.Task<System.Collections.Generic.List<int>> ShortestPathAsync(int start, int finish, System.Collections.Generic.Dictionary<int, System.Collections.Generic.Dictionary<int, int>> vlist);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -63,12 +63,12 @@ namespace GraphApp.GraphService {
             return base.Channel.UpdateDBAsync();
         }
         
-        public void ShortestPath(string a, string b) {
-            base.Channel.ShortestPath(a, b);
+        public System.Collections.Generic.List<int> ShortestPath(int start, int finish, System.Collections.Generic.Dictionary<int, System.Collections.Generic.Dictionary<int, int>> vlist) {
+            return base.Channel.ShortestPath(start, finish, vlist);
         }
         
-        public System.Threading.Tasks.Task ShortestPathAsync(string a, string b) {
-            return base.Channel.ShortestPathAsync(a, b);
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<int>> ShortestPathAsync(int start, int finish, System.Collections.Generic.Dictionary<int, System.Collections.Generic.Dictionary<int, int>> vlist) {
+            return base.Channel.ShortestPathAsync(start, finish, vlist);
         }
     }
 }

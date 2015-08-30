@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using GraphService.Model;
+
 
 namespace GraphService
 {
@@ -15,6 +18,6 @@ namespace GraphService
         void UpdateDB();
 
         [OperationContract]
-        void ShortestPath(string a, string b);
+        List<int> ShortestPath(int start, int finish, Dictionary<int,Dictionary<int,int>> vlist);
     }
 }

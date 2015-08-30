@@ -1,4 +1,6 @@
-﻿using GraphX.Controls;
+﻿using GraphApp.GraphService;
+using GraphService.Model;
+using GraphX.Controls;
 using QuickGraph;
 
 namespace GraphApp

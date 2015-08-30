@@ -1,4 +1,6 @@
-﻿using GraphX.PCL.Logic.Models;
+﻿using GraphApp.GraphService;
+using GraphService.Model;
+using GraphX.PCL.Logic.Models;
 using QuickGraph;
 
 namespace GraphApp
