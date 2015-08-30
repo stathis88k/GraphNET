@@ -1,0 +1,34 @@
+USE [test]
+GO
+/****** Object:  Table [dbo].[Edges]    Script Date: 30/8/2015 13:36:12 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Edges](
+	[FromNode] [int] NOT NULL,
+	[ToNode] [int] NOT NULL,
+	[Weight] [int] NOT NULL DEFAULT ((1)),
+PRIMARY KEY CLUSTERED 
+(
+	[FromNode] ASC,
+	[ToNode] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+/****** Object:  Table [dbo].[Nodes]    Script Date: 30/8/2015 13:36:12 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Nodes](
+	[Id] [int] NOT NULL,
+	[label] [nvarchar](50) NOT NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
